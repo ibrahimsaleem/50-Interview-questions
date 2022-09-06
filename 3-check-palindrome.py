@@ -5,14 +5,12 @@
 #so we make program to check if a given string a palindrome
 
 s = str(input("Enter word ot check palindrome :")) #taking input string
-s = list(s)             #converting all string Characters into a list
-s2 = list(reversed(s))  #reverseing the list and making new list s2
+s1 = list(s)             #converting all string Characters into a list
+s2 = list(reversed(s1))  #reverseing the list and making new list s2
 
-if(s==s2):              #condtion if s and s2 is same it will be palindrome
-    s= "".join(s)
+if(s1==s2):              #condtion if s and s2 is same it will be palindrome
     print(s," is palindrome")
 else:
-    s= "".join(s)
     print(s," is not-palindrome")
 
 
