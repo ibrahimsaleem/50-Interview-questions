@@ -18,6 +18,7 @@ Time Complexity Analysis:
 - Solution 2 (Recursive): O(log n) time, O(log n) space (due to call stack)
 - Solution 3 (Built-in): O(log n) time, O(1) space
 """
+import secrets
 
 def binary_search_iterative(nums, target):
     """
@@ -252,11 +253,10 @@ def interactive_demo():
 def performance_comparison():
     """Compare performance of different approaches"""
     import time
-    import random
     
     # Create a large sorted array
-    nums = sorted([random.randint(1, 1000) for _ in range(10000)])
-    target = random.choice(nums)  # Target that exists
+    nums = sorted([secrets.SystemRandom().randint(1, 1000) for _ in range(10000)])
+    target = secrets.choice(nums)  # Target that exists
     
     solutions = [
         ("Iterative", binary_search_iterative),

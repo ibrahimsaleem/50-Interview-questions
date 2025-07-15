@@ -18,6 +18,7 @@ Time Complexity Analysis:
 - Worst Case: O(n²) - When array is reverse sorted
 - Space Complexity: O(1) - In-place sorting
 """
+import secrets
 
 def bubble_sort_basic(arr):
     """
@@ -217,7 +218,6 @@ def test_bubble_sort():
 def performance_comparison():
     """Compare performance of different bubble sort implementations"""
     import time
-    import random
     
     # Create test arrays of different sizes
     test_sizes = [100, 500, 1000]
@@ -228,7 +228,7 @@ def performance_comparison():
         print(f"\nArray size: {size}")
         
         # Create random array
-        arr = [random.randint(1, 1000) for _ in range(size)]
+        arr = [secrets.SystemRandom().randint(1, 1000) for _ in range(size)]
         
         solutions = [
             ("Basic", bubble_sort_basic),
