@@ -19,6 +19,7 @@ Time Complexity Analysis:
 - Solution 2 (Hash Set): O(n²) time, O(n) space
 - Solution 3 (Two Pointers): O(n²) time, O(1) space (excluding output space)
 """
+import secrets
 
 def three_sum_brute_force(nums):
     """
@@ -273,10 +274,9 @@ def interactive_demo():
 def performance_comparison():
     """Compare performance of different approaches"""
     import time
-    import random
     
     # Create a test array
-    nums = [random.randint(-10, 10) for _ in range(20)]
+    nums = [secrets.SystemRandom().randint(-10, 10) for _ in range(20)]
     
     solutions = [
         ("Brute Force", three_sum_brute_force),
